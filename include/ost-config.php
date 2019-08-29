@@ -39,10 +39,10 @@ define('ADMIN_EMAIL','henry.esenwa@c-ileasing.com');
 # ---------------------------------------------------
 # Mysql Login info
 define('DBTYPE','mysql');
-define('DBHOST','localhost');
+define('DBHOST','cileasingmysqlsvr.mysql.database.azure.com');
 define('DBNAME','helpdesk_it');
-define('DBUSER','helpdesk_it');
-define('DBPASS','@1234Info');
+define('DBUSER','cileasingadmin@cileasingmysqlsvr');
+define('DBPASS','L0tus@c-1');
 
 # Table prefix
 define('TABLE_PREFIX','ost_');
