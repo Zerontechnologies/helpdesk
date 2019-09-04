@@ -4,13 +4,13 @@
  */
 if(isset($_POST['username']) && isset($_POST['password'])){
 
-    $adServer = "ldap://domaincontroller.mydomain.com";
+    $adServer = "ldap://52.178.10.45:636";
 
     $ldap = ldap_connect($adServer);
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $ldaprdn = 'mydomain' . "\\" . $username;
+    $ldaprdn = $username . "@c-ileasing.com";
 
     ldap_set_option($ldap, LDAP_OPT_PROTOCOL_VERSION, 3);
     ldap_set_option($ldap, LDAP_OPT_REFERRALS, 0);
@@ -19,7 +19,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 
     if ($bind) {
         $filter="(sAMAccountName=$username)";
-        $result = ldap_search($ldap,"dc=MYDOMAIN,dc=COM",$filter);
+        $result = ldap_search($ldap,"dc=C-ILEASING,dc=COM",$filter);
         ldap_sort($ldap,$result,"sn");
         $info = ldap_get_entries($ldap, $result);
         for ($i=0; $i<$info["count"]; $i++)
