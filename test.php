@@ -8,8 +8,10 @@ error_reporting(E_ALL);
 
 if(isset($_POST['username']) && isset($_POST['password'])){
 
-    $adServer = "ldap://172.18.0.5:389";
-
+    //$adServer = "ldap://172.18.0.5:389";
+    
+    $adServer = "ldap://c-ileasingrepad.westeurope.cloudapp.azure.com"
+    
     $ldap = ldap_connect($adServer);
     $username = $_POST['username'];
     $password = $_POST['password'];
