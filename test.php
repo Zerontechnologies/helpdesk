@@ -10,7 +10,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 
     //$adServer = "ldap://172.18.0.5:389";
     
-    $adServer = "ldap://40.119.138.7"
+    $adServer = "ldap://40.119.138.7";
     
     $ldap = ldap_connect($adServer);
     $username = $_POST['username'];
