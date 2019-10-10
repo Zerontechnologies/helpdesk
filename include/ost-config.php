@@ -40,7 +40,7 @@ define('ADMIN_EMAIL','henry.esenwa@c-ileasing.com');
 # Mysql Login info
 define('DBTYPE','mysql');
 define('DBHOST','c-ileasingdbsvr.mysql.database.azure.com');
-define('DBNAME','c-ileasingdbsvr');
+define('DBNAME','helpdesk_it');
 define('DBUSER','migrationad@c-ileasingdbsvr');
 define('DBPASS','password@1');
 
